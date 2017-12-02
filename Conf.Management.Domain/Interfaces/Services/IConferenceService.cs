@@ -1,4 +1,5 @@
 ﻿using Conf.Management.Domain.Entities;
+using System.Collections.Generic;
 
 namespace Conf.Management.Domain.Interfaces.Services
 {

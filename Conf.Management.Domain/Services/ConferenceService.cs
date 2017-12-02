@@ -19,7 +19,7 @@ namespace Conf.Management.Domain.Services
         {
             return conferenceRepository
                 .Get(conf => conf.Organizer.Email == email && conf.AccessCode == accessCode)
-                .Single();
+                .FirstOrDefault();
         }
 
         public Conference Create(Conference conference)

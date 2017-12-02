@@ -9,15 +9,20 @@ namespace Conf.Management.Domain.Repositories
 {
     internal class ConferenceRepository : IConferenceRepository
     {
-        private static readonly List<Conference> ConferenceStore = new List<Conference>();
+        private static readonly List<Conference> ConferenceStore = FakeConferenceStorage.GetData().ToList();
 
         public ConferenceRepository()
-        {   
+        {
         }
 
-        public IEnumerable<Conference> Get(Expression<Func<Conference, bool>> predicate)
+        public IEnumerable<Conference> GetAll()
         {
-            return ConferenceStore.Where(predicate.Compile());
+            return ConferenceStore;
+        }
+
+        public IEnumerable<Conference> Get(Func<Conference, bool> predicate)
+        {
+            return ConferenceStore.Where(predicate).ToList();
         }
 
         public Conference GetById(Guid id)

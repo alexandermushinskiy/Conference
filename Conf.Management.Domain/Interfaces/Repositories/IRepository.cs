@@ -7,7 +7,7 @@ namespace Conf.Management.Domain.Interfaces.Repositories
     public interface IRepository<TEntity>
         where TEntity : IAggregateRoot
     {
-        IEnumerable<TEntity> Get(Expression<Func<TEntity, bool>> predicate);
+        IEnumerable<TEntity> Get(Func<TEntity, bool> predicate);
         TEntity GetById(Guid id);
 
         void Create(TEntity entity);

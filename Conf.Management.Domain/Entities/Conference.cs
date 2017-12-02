@@ -12,7 +12,7 @@ namespace Conf.Management.Domain.Entities
         public DateTime StartDate { get; }
         public DateTime FinishDate { get; }
         public ConferenceOrganizer Organizer { get; }
-        public Address Address { get; }
+        public string Venue { get; }
 
         public Conference(
             Guid id,
@@ -22,7 +22,7 @@ namespace Conf.Management.Domain.Entities
             DateTime startDate,
             DateTime finishDate,
             ConferenceOrganizer organizer,
-            Address address)
+            string venue)
         {
             Id = id;
             AccessCode = accessCode;
@@ -31,7 +31,7 @@ namespace Conf.Management.Domain.Entities
             StartDate = startDate;
             FinishDate = finishDate;
             Organizer = organizer;
-            Address = address;
+            Venue = venue;
         }
     }
 }

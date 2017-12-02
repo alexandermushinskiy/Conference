@@ -13,7 +13,7 @@ namespace Conf.Management.Domain.Factories
             this.accessCodeProvider = accessCodeProvider;
         }
 
-        public Conference Create(string name, string description, DateTime startDate, DateTime finishDate, string ownerName, string ownerEmail)
+        public Conference Create(string name, string description, DateTime startDate, DateTime finishDate, string ownerName, string ownerEmail, string venue)
         {
             Guid conferenceId = Guid.NewGuid();
             string accessCode = accessCodeProvider.Generate();
@@ -26,7 +26,7 @@ namespace Conf.Management.Domain.Factories
                 startDate,
                 finishDate,
                 new ConferenceOrganizer(ownerName, ownerEmail),
-                new Address()
+                venue
             );
         }
     }
