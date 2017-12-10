@@ -1,2 +1,9 @@
 /Conf.Management.Domain/obj
 /Conf.Management.Domain/bin
+*.suo
+*.suo
+/Conf.Management.WebApi/bin/Debug/netcoreapp1.1
+/Conf.Management.Infrastructure/bin
+/Conf.Management.Infrastructure/obj
+/Conf.Management.WebApi/obj
+/Conf.Management.WebApi/bin
