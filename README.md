@@ -28,15 +28,15 @@ The skeleton of the solution has the following folders and files structure:
 |   |   ├── Providers
 |   |   |   └── IAccessCodeProvider.cs
 |   |   ├── Repositories
-|   |   |	├── IConferenceRepository.cs
+|	|	|	├── IConferenceRepository.cs
 |   |   |   └── IRepository.cs
 |   |   └── IAggregateRoot.cs
 |   ├── Providers
 |   |   └── AccessCodeProvider.cs
 |   ├── Repositories
-|	|	├── ConferenceRepository.cs
-|	|	└── FakeConferenceData.cs
-|	└──DomainAutofacModule.cs
+|   |   ├── ConferenceRepository.cs
+|   |   └── FakeConferenceData.cs
+|   └──DomainAutofacModule.cs
 |
 |
 |
