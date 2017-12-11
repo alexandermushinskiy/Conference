@@ -50,13 +50,13 @@ The skeleton of the solution has the following folders and files structure:
     |   └── ConferenceController.cs
     ├── Models
     |   ├── Requests
-    |   |	└── CreateRequestModel.cs
- 	|	└── Responses
-    |		└── CreateResponseModel.cs
+    |   |   └── CreateRequestModel.cs
+ 	|   └── Responses
+    |       └── CreateResponseModel.cs
     └── Resolvers
- 	|	├── ConferenceCodeResolver.cs
- 	|	└── ConferenceIdResolver.cs
-	├── AutoMapperProfile.cs
+    |   ├── ConferenceCodeResolver.cs
+    |   └── ConferenceIdResolver.cs
+    ├── AutoMapperProfile.cs
     ├── ConferencesAutoMapperProfile.cs
     ├── Program.cs
     ├── Startup.cs
