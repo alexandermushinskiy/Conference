@@ -34,30 +34,31 @@ The skeleton of the solution has the following folders and files structure:
 |   ├── Providers
 |   |   └── AccessCodeProvider.cs
 |   └── Repositories
-|   |   ├── ConferenceRepository.cs
-|   |   └── FakeConferenceData.cs
-├── DomainAutofacModule.cs
+|	|	├── ConferenceRepository.cs
+|	|	└── FakeConferenceData.cs
+|	└──DomainAutofacModule.cs
 |
 |
 |
 ├── Conf.Management.Infrastructure
+|   └── ...
 |
 |
 |
-├── Conf.Management.WebApi
-|   ├── Controllers
-|   |   └── ConferenceController.cs
-|   ├── Models
-|   |   ├── Requests
-|   |   |	└── CreateRequestModel.cs
-|	|	└── Responses
-|   |   |	└── CreateResponseModel.cs
-|   └── Resolvers
-|	|	├── ConferenceCodeResolver.cs
-|	|	└── ConferenceIdResolver.cs
-├── AutoMapperProfile.cs
-├── ConferencesAutoMapperProfile.cs
-├── Program.cs
-├── Startup.cs
-└── WebApiAutofacModule.cs
+└── Conf.Management.WebApi
+    ├── Controllers
+    |   └── ConferenceController.cs
+    ├── Models
+    |   ├── Requests
+    |   |	└── CreateRequestModel.cs
+ 	|	└── Responses
+    |   |	└── CreateResponseModel.cs
+    └── Resolvers
+ 	|	├── ConferenceCodeResolver.cs
+ 	|	└── ConferenceIdResolver.cs
+	├── AutoMapperProfile.cs
+    ├── ConferencesAutoMapperProfile.cs
+    ├── Program.cs
+    ├── Startup.cs
+    └── WebApiAutofacModule.cs
 
