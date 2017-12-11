@@ -33,7 +33,7 @@ The skeleton of the solution has the following folders and files structure:
 |   |   └── IAggregateRoot.cs
 |   ├── Providers
 |   |   └── AccessCodeProvider.cs
-|   └── Repositories
+|   ├── Repositories
 |	|	├── ConferenceRepository.cs
 |	|	└── FakeConferenceData.cs
 |	└──DomainAutofacModule.cs
@@ -52,7 +52,7 @@ The skeleton of the solution has the following folders and files structure:
     |   ├── Requests
     |   |	└── CreateRequestModel.cs
  	|	└── Responses
-    |   |	└── CreateResponseModel.cs
+    |		└── CreateResponseModel.cs
     └── Resolvers
  	|	├── ConferenceCodeResolver.cs
  	|	└── ConferenceIdResolver.cs
