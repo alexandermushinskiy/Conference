@@ -51,7 +51,7 @@ The skeleton of the solution has the following folders and files structure:
     ├── Models
     |   ├── Requests
     |   |   └── CreateRequestModel.cs
- 	|   └── Responses
+    |   └──Responses
     |       └── CreateResponseModel.cs
     └── Resolvers
     |   ├── ConferenceCodeResolver.cs
