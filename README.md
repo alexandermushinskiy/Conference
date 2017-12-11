@@ -2,7 +2,7 @@
 Test solution for DDD practices
 
 ## Folders and files structure
-#### Solytion skeleton
+#### Solution skeleton
 The skeleton of the solution has the following folders and files structure:
 ```
 ├── Conf.Management.Domain
