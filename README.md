@@ -28,7 +28,7 @@ The skeleton of the solution has the following folders and files structure:
 |   |   ├── Providers
 |   |   |   └── IAccessCodeProvider.cs
 |   |   ├── Repositories
-|	|	|	├── IConferenceRepository.cs
+|   |   |   ├── IConferenceRepository.cs
 |   |   |   └── IRepository.cs
 |   |   └── IAggregateRoot.cs
 |   ├── Providers
