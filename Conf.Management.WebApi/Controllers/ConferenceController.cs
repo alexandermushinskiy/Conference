@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 using Conf.Management.Domain.Interfaces.Repositories;
 using Conf.Management.Domain.Entities;
-using Conf.Management.WebApi.Models;
+using Conf.Management.WebApi.Models.Responses;
+using Conf.Management.WebApi.Models.Requests;
 using Conf.Management.Domain.Commands;
 using Conf.Management.Domain.Interfaces.Handlers;
-using Conf.Management.Domain.Interfaces.Providers;
 using Conf.Management.Domain.Interfaces.Dao;
 using Conf.Management.Domain.Dao.Models;
+using AutoMapper;
 
 namespace Conf.Management.WebApi.Controllers
 {
@@ -17,19 +18,19 @@ namespace Conf.Management.WebApi.Controllers
     public class ConferencesController : Controller
     {
         private readonly ICommandHandler<CreateConferenceCommand> createConferenceCommandHandler;
-        private readonly IAccessCodeProvider accessCodeProvider;
         private readonly IConferenceDao conferenceDao;
         private readonly IConferenceRepository conferenceRepository;
+        private readonly IMapper mapper;
 
         public ConferencesController(
+            IMapper mapper,
             ICommandHandler<CreateConferenceCommand> createConferenceCommandHandler,
-            IAccessCodeProvider accessCodeProvider,
             IConferenceDao conferenceDao,
             IConferenceRepository conferenceRepository)
         {
             this.createConferenceCommandHandler = createConferenceCommandHandler;
-            this.accessCodeProvider = accessCodeProvider;
             this.conferenceDao = conferenceDao;
+            this.mapper = mapper;
 
             this.conferenceRepository = conferenceRepository;
         }
@@ -54,24 +55,11 @@ namespace Conf.Management.WebApi.Controllers
         [HttpPost("create")]
         public IActionResult Create([FromBody]CreateRequestModel createRequestModel)
         {
-            string conferenceCode = accessCodeProvider.Generate();
-            Guid conferenceId = Guid.NewGuid();
-
-            var command = new CreateConferenceCommand
-            {
-                Id = conferenceId,
-                AccessCode = conferenceCode,
-                Name = createRequestModel.Name,
-                Description = createRequestModel.Description,
-                StartDate = createRequestModel.StartDate,
-                FinishDate = createRequestModel.FinishDate,
-                OwnerName = createRequestModel.OwnerName,
-                OwnerEmail = createRequestModel.OwnerEmail,
-                Venue = createRequestModel.Venue
-            };
+            CreateConferenceCommand command = mapper.Map<CreateConferenceCommand>(createRequestModel);  
             createConferenceCommandHandler.Handle(command);
 
-            return Created($"api/details/{conferenceCode}", conferenceId);
+            CreateResponseModel response = new CreateResponseModel { Id = command.Id };
+            return Created($"api/details/{command.AccessCode}", response);
         }
     }
 }

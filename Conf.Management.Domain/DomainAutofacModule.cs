@@ -15,13 +15,34 @@ namespace Conf.Management.Domain
     {
         protected override void Load(ContainerBuilder builder)
         {
-            builder.RegisterType<ConferenceRepository>().As<IConferenceRepository>();
-            builder.RegisterType<AccessCodeProvider>().As<IAccessCodeProvider>();
-
+            // Repositories
+            RegisterRepositories(builder);
+            // Providers
+            RegisterProviders(builder);
             // Command handlers
-            builder.RegisterType<ConferenceCommandHandler>().As<ICommandHandler<CreateConferenceCommand>>();
-
+            RegisterCommandHandlers(builder);
             // Dao
+            RegisterDaos(builder);
+        }
+
+        private void RegisterRepositories(ContainerBuilder builder)
+        {
+            builder.RegisterType<ConferenceRepository>().As<IConferenceRepository>();
+        }
+
+        private void RegisterProviders(ContainerBuilder builder)
+        {
+            builder.RegisterType<AccessCodeProvider>().As<IAccessCodeProvider>();
+            builder.RegisterType<GuidProvider>().As<IGuidProvider>();
+        }
+
+        private void RegisterCommandHandlers(ContainerBuilder builder)
+        {
+            builder.RegisterType<ConferenceCommandHandler>().As<ICommandHandler<CreateConferenceCommand>>();
+        }
+
+        private void RegisterDaos(ContainerBuilder builder)
+        {
             builder.RegisterType<ConferenceDao>().As<IConferenceDao>();
         }
     }

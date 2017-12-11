@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Conf.Management.WebApi.Models
+namespace Conf.Management.WebApi.Models.Requests
 {
     public class CreateRequestModel
     {
