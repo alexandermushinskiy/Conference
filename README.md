@@ -39,26 +39,27 @@ The skeleton of the solution has the following folders and files structure:
 |   └──DomainAutofacModule.cs
 |
 |
-|
 ├── Conf.Management.Infrastructure
 |   └── ...
 |
 |
-|
 └── Conf.Management.WebApi
-    ├── Controllers
-    |   └── ConferenceController.cs
-    ├── Models
-    |   ├── Requests
-    |   |   └── CreateRequestModel.cs
-    |   └──Responses
-    |       └── CreateResponseModel.cs
-    └── Resolvers
-    |   ├── ConferenceCodeResolver.cs
-    |   └── ConferenceIdResolver.cs
-    ├── AutoMapperProfile.cs
-    ├── ConferencesAutoMapperProfile.cs
-    ├── Program.cs
-    ├── Startup.cs
-    └── WebApiAutofacModule.cs
-
+|   ├── Controllers
+|   |   └── ConferenceController.cs
+|   ├── Models
+|   |   ├── Requests
+|   |   |   └── CreateRequestModel.cs
+|   |   └──Responses
+|   |       └── CreateResponseModel.cs
+|   └── Resolvers
+|   |   ├── ConferenceCodeResolver.cs
+|   |   └── ConferenceIdResolver.cs
+|   ├── AutoMapperProfile.cs
+|   ├── ConferencesAutoMapperProfile.cs
+|   ├── Program.cs
+|   ├── Startup.cs
+|   └── WebApiAutofacModule.cs
+|
+├── .gitignore
+├── Conf.Management.sln
+└── README.md
