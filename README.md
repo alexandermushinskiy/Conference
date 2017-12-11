@@ -1,9 +1,9 @@
-# Conference.Management project structure
-Test project for DDD practices
+# Conference.Management solution structure
+Test solution for DDD practices
 
-## Files structure
-#### Project skeleton
-The skeleton of the project has the following files structure:
+## Folders and files structure
+#### Solytion skeleton
+The skeleton of the solution has the following folders and files structure:
 ```
 ├── Conf.Management.Domain
 |   ├── CommandHandlers
@@ -37,11 +37,12 @@ The skeleton of the project has the following files structure:
 |   |   ├── ConferenceRepository.cs
 |   |   └── FakeConferenceData.cs
 ├── DomainAutofacModule.cs
-└────────────────────────────────────────
+|
+|
 |
 ├── Conf.Management.Infrastructure
 |
-└────────────────────────────────────────
+|
 |
 ├── Conf.Management.WebApi
 |   ├── Controllers
