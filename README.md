@@ -5,31 +5,51 @@ Test project for DDD practices
 #### Project skeleton
 The skeleton of the project has the following files structure:
 ```
-├── dist
-├── e2e
-├── node_modules
-├── src
-|   ├── app
-|   |   ├── core
-|   |   ├── shared
-|   |   ├── app.component.html|ts|spec.ts|scss
-|   |   └── app.module.ts
-|   ├── assets
-|   ├── environments
-|   ├── favicon.ico
-|   ├── index.html
-|   ├── main.ts
-|   ├── polyfills.ts
-|   ├── styles.scss
-|   ├── tsconfig.app.json
-|   ├── tsconfig.spec.json
-|   └── typings.d.ts
-├── .angular-cli.json
-├── .editorconfig
-├── .gitignore
-├── karma.conf.json
-├── package.json
-├── protractor.conf.json
-├── README.md
-├── tsconfig.json
-└── tslint.json
+├── Conf.Management.Domain
+|   ├── CommandHandlers
+|   |   └── ConferenceCommandHandler.cs
+|   ├── Commands
+|   |   └── CreateConferenceCommand.cs
+|   ├── Dao
+|   |   ├── Models
+|   |   |   └── ConferenceDetails.cs
+|   |	└── ConferenceDao.cs
+|   ├── Entities
+|   |   ├── Address.cs
+|   |   ├── Conference.cs
+|   |   └── ConferenceOrganizer.cs
+|   ├── Interfaces
+|   |   ├── Commands
+|   |   |   └── ICommand.cs
+|   |   ├── Dao
+|   |   |   └── IConferenceDao.cs
+|   |   ├── Handlers
+|   |   |   └── ICommandHander.cs
+|   |   ├── Providers
+|   |   |   └── IAccessCodeProvider.cs
+|   |   ├── Repositories
+|   |   |	├── IConferenceRepository.cs
+|   |   |   └── IRepository.cs
+|   |   └── IAggregateRoot.cs
+|   ├── Providers
+|   |   └── AccessCodeProvider.cs
+|   └── Repositories
+|   |   ├── ConferenceRepository.cs
+|   |   └── FakeConferenceData.cs
+├── DomainAutofacModule.cs
+└────────────────────────────────────────
+|
+├── Conf.Management.Infrastructure
+|
+└────────────────────────────────────────
+|
+├── Conf.Management.WebApi
+|   ├── Controllers
+|   |   └── ConferenceController.cs
+|   └── Models
+|   |   └── CreateRequestModel.cs
+├── ConferencesAutoMapperProfile.cs
+├── Program.cs
+├── Startup.cs
+└── WebApiAutofacModule.cs
+

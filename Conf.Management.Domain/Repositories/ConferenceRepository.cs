@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Linq.Expressions;
 using Conf.Management.Domain.Entities;
 using Conf.Management.Domain.Interfaces.Repositories;
 
@@ -19,12 +18,7 @@ namespace Conf.Management.Domain.Repositories
         {
             return ConferenceStore;
         }
-
-        public IEnumerable<Conference> Get(Func<Conference, bool> predicate)
-        {
-            return ConferenceStore.Where(predicate).ToList();
-        }
-
+        
         public Conference GetById(Guid id)
         {
             return ConferenceStore.Find(conf => conf.Id == id);
