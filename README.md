@@ -47,8 +47,15 @@ The skeleton of the solution has the following folders and files structure:
 ├── Conf.Management.WebApi
 |   ├── Controllers
 |   |   └── ConferenceController.cs
-|   └── Models
-|   |   └── CreateRequestModel.cs
+|   ├── Models
+|   |   ├── Requests
+|   |   |	└── CreateRequestModel.cs
+|	|	└── Responses
+|   |   |	└── CreateResponseModel.cs
+|   └── Resolvers
+|	|	├── ConferenceCodeResolver.cs
+|	|	└── ConferenceIdResolver.cs
+├── AutoMapperProfile.cs
 ├── ConferencesAutoMapperProfile.cs
 ├── Program.cs
 ├── Startup.cs
