@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using Conf.Management.Domain.Entities;
 using Conf.Management.Domain.Interfaces.Repositories;
+using Conf.Management.Infrastructure.DataAccess.Dummy;
 
-namespace Conf.Management.Domain.Repositories
+namespace Conf.Management.Infrastructure.DataAccess.Repositories
 {
     internal class ConferenceRepository : IConferenceRepository
     {
-        private static readonly List<Conference> ConferenceStore = FakeConferenceStorage.GetData().ToList();
+        private static readonly List<Conference> ConferenceStore = DummyStorage.GetData().ToList();
 
         public ConferenceRepository()
         {

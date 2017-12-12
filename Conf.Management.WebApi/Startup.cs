@@ -7,6 +7,7 @@ using Autofac;
 using AutoMapper;
 using Newtonsoft.Json.Serialization;
 using Conf.Management.Domain;
+using Conf.Management.Infrastructure.DataAccess;
 
 namespace Conf.Management.WebApi
 {
@@ -49,6 +50,7 @@ namespace Conf.Management.WebApi
         public void ConfigureContainer(ContainerBuilder builder)
         {
             builder.RegisterModule<DomainAutofacModule>();
+            builder.RegisterModule<DataAccessAutofacModule>();
             builder.RegisterModule<WebApiAutofacModule>();
         }
     }

@@ -1,14 +1,14 @@
-﻿using Conf.Management.Domain.Entities;
-using System;
+﻿using System;
 using System.Collections.Generic;
+using Conf.Management.Domain.Entities;
 
-namespace Conf.Management.Domain.Repositories
+namespace Conf.Management.Infrastructure.DataAccess.Dummy
 {
-    internal static class FakeConferenceStorage
+    internal static class DummyStorage
     {
         public static IEnumerable<Conference> GetData()
         {
-            return new Conference[] 
+            return new Conference[]
             {
                 new Conference(
                     new Guid(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11),

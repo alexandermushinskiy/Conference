@@ -4,13 +4,13 @@ using System.Linq;
 using Conf.Management.Domain.Interfaces.Dao;
 using Conf.Management.Domain.Dao.Models;
 using Conf.Management.Domain.Entities;
-using Conf.Management.Domain.Repositories;
+using Conf.Management.Infrastructure.DataAccess.Dummy;
 
-namespace Conf.Management.Domain.Dao
+namespace Conf.Management.Infrastructure.DataAccess.Dao
 {
     internal class ConferenceDao : IConferenceDao
     {
-        private static readonly List<Conference> ConferenceStore = FakeConferenceStorage.GetData().ToList();
+        private static readonly List<Conference> ConferenceStore = DummyStorage.GetData().ToList();
 
         public ConferenceDetails GetConferenceDetails(string conferenceCode)
         {
