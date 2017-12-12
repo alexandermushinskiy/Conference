@@ -8,3 +8,5 @@
 /Conf.Management.WebApi/obj
 /Conf.Management.WebApi/bin
 /Conf.Management.WebApi/Conf.Management.WebApi.csproj.user
+/Conf.Management.Infrastructure.DataAccess/obj
+/Conf.Management.Infrastructure.DataAccess/bin
