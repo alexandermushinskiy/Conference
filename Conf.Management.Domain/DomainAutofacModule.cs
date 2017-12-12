@@ -11,9 +11,7 @@ namespace Conf.Management.Domain
     {
         protected override void Load(ContainerBuilder builder)
         {
-            // Providers
             RegisterProviders(builder);
-            // Command handlers
             RegisterCommandHandlers(builder);
         }
 

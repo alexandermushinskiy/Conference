@@ -10,10 +10,7 @@ namespace Conf.Management.Infrastructure.DataAccess
     {
         protected override void Load(ContainerBuilder builder)
         {
-            // Repositories
             RegisterRepositories(builder);
-
-            // Dao
             RegisterDaos(builder);
         }
 
