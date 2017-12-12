@@ -13,7 +13,6 @@ The skeleton of the solution has the following folders and files structure:
 |   ├── Dao
 |   |   ├── Models
 |   |   |   └── ConferenceDetails.cs
-|   |	└── ConferenceDao.cs
 |   ├── Entities
 |   |   ├── Address.cs
 |   |   ├── Conference.cs
@@ -33,14 +32,21 @@ The skeleton of the solution has the following folders and files structure:
 |   |   └── IAggregateRoot.cs
 |   ├── Providers
 |   |   └── AccessCodeProvider.cs
+|   └── DomainAutofacModule.cs
+|
+|
+├── Conf.Management.Infrastructure.DataAccess
+|   ├── Dao
+|   |	└── ConferenceDao.cs
+|   ├── Database
+|   |   ├── EntityConfigurations
+|   |   |   └── ConfigureConference.cs
+|   |   └── ConfManagementDbContext.cs
+|   ├── Dummy
+|   |	└── DummyStorage.cs
 |   ├── Repositories
-|   |   ├── ConferenceRepository.cs
-|   |   └── FakeConferenceData.cs
-|   └──DomainAutofacModule.cs
-|
-|
-├── Conf.Management.Infrastructure
-|   └── ...
+|   |	└── ConferenceRepository.cs
+|   └── DataAccessAutofacModule.cs
 |
 |
 ├── Conf.Management.WebApi
