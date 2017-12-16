@@ -10,3 +10,9 @@
 /Conf.Management.WebApi/Conf.Management.WebApi.csproj.user
 /Conf.Management.Infrastructure.DataAccess/obj
 /Conf.Management.Infrastructure.DataAccess/bin
+/Conf.Infrastructure/bin
+/Conf.Infrastructure/obj
+/Conf.Management/obj
+/Conf.Management/bin
+/Conf.Management.DataAccess/bin
+/Conf.Management.DataAccess/obj
